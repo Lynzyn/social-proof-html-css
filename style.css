@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: white;
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: auto, auto;
+    background-position: calc(50% + -30rem) calc(50% + -12rem), calc(50% + 15rem) calc(50% - -7rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Card Container */
+.card {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Section */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Left Section */
+.left {
+    max-width: 500px;
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    color: hsl(300, 43%, 22%);
+    margin-bottom: 1.5rem;
+}
+
+.left p {
+    color: hsl(303, 10%, 53%);
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+/* Right Section - Star Ratings */
+.right ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    background-color: hsl(300, 24%, 96%);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+li:nth-child(1) {
+    margin-right: 7rem;
+    margin-left: -7rem;
+}
+
+li:nth-child(2) {
+    margin-right: 5rem;
+    margin-left: -5rem;
+}
+
+li:nth-child(3) {
+    margin-left: -3rem;
+    margin-right: 3rem;
+}
+
+li img {
+    margin-right: 5px;
+    
+}
+
+
+.detail {
+    margin-left: 1rem;
+}
+
+/* Reviews */
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.review1, .review2, .review3 {
+    background-color: hsl(300, 43%, 22%);
+    padding: 1.5rem;
+    color: white;
+    border-radius: 10px;
+    max-width: 350px;
+    flex: 1;
+}
+.review3{
+    margin-top: 2rem;
+}
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bottom img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.phase {
+    line-height: 1.5rem;
+}
+
+/* Adjust Positioning */
+.review1 { align-self: flex-start; }
+.review2 { align-self: center; }
+.review3 { align-self: flex-end; }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1130px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    body{
+        background-position: calc(50% + -30rem) calc(50% + -24rem), calc(50% + 15rem) calc(50% - -15rem);
+    }
+    
+    .left, .right ul {
+        max-width: 100%;
+    }
+    li {
+        justify-content: center;
+        margin: 0 auto 0.7rem;
+        
+    }
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review1, .review2, .review3 {
+        align-self: center;
+        width: 100%;
+        max-width: 400px;
+    }
+    li:nth-child(1) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    li:nth-child(2) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    li:nth-child(3) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+}
